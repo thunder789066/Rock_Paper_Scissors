@@ -1,0 +1,27 @@
+body {
+    padding-top: 1em;
+    text-align: center;
+}
+
+.buttons {
+    margin: 20px auto;
+    margin-left: 120px;
+    text-align: center;
+}
+
+.buttons .button {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 20px 50px;
+}
+
+.buttons .button:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.screen #result {
+    visibility: visible;
+    font-size: 26px;
+}
