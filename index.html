@@ -12,6 +12,7 @@
     <div class="row">
         <h1>Rock, Paper, Scissors Game</h1>
 
+        <!-- .js file sets result = "" -->
         <div class="screen">
             <p id="result">output</p>
         </div>
@@ -19,6 +20,7 @@
         <h3>Make your choice:</h3>
 
         <div class="buttons">
+            <!-- calls function 'getResult() & passing parameter depending on user choice -->
             <div class="button" id="img1_btn" onclick="getResult(1)"><img src="Imgs/img1_rock.png"/><p>Rock</p></div>
             <div class="button" id="img2_btn" onclick="getResult(2)"><img src="Imgs/img2_paper.png"/><p>Paper</p></div>
             <div class="button" id="img3_btn" onclick="getResult(3)"><img src="Imgs/img3_scissor.png"/><p>Scissor</p></div>

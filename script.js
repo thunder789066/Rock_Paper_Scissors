@@ -2,6 +2,7 @@ var result = document.getElementById("result");
 var user = 0;
 var ai = 0;
 
+// setting all default values to null or 0
 clear();
 
 function clear() {
@@ -12,7 +13,7 @@ function clear() {
 
 function getResult(user_choice) {
     user = user_choice;
-    getAI();
+    getAI();    // calling AI function after setting 'ai' var
 
     if (user === 1) {    //rock
         if (ai === 1) {result.innerHTML = "AI chose rock. It's a Draw!"}
@@ -30,5 +31,5 @@ function getResult(user_choice) {
 }
 
 function getAI() {
-    ai = Math.floor(Math.random() * 3) + 1;
+    ai = Math.floor(Math.random() * 3) + 1; //setting 'ai' var w/ random # of 1-3 inclusive
 }
