@@ -22,7 +22,6 @@ body {
 }
 
 .screen #result {
-    visibility: visible;
     font-size: 26px;
     color: lightseagreen;
 }
