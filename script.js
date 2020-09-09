@@ -1,5 +1,5 @@
 var result = document.getElementById("result");
-var button = document.getElementsByClassName("button");
+//var button = document.getElementsByClassName("button");
 //var rock = document.getElementById("img1_btn");
 //var paper = document.getElementById("img2_btn");
 //var scissors = document.getElementById("img3_btn");
@@ -14,48 +14,50 @@ function clear() {
     ai = 0;
 }
 
-function getResult() {
-    getUser();
+function getResult(user_choice) {
+    //getUser();
+    user = user_choice;
     getAI();
 
+    console.log(user);
+    console.log(ai);
+    console.log("-");
+
     if (user === 1) {    //rock
-        if (ai === 1) {result.innerHTML = "It's a Draw!"}
-        if (ai === 2) {result.innerHTML = "You Lose!"}
-        if (ai === 3) {result.innerHTML = "You Win!"}
+        if (ai === 1) {result.innerHTML = "AI chose rock. It's a Draw!"}
+        if (ai === 2) {result.innerHTML = "AI chose paper. You Lose!"}
+        if (ai === 3) {result.innerHTML = "AI chose scissors. You Win!"}
     } else if (user === 2) { //paper
-        if (ai === 1) {result.innerHTML = "You Win!"}
-        if (ai === 2) {result.innerHTML = "It's a Draw!"}
-        if (ai === 3) {result.innerHTML = "You Lose!"}
+        if (ai === 1) {result.innerHTML = "AI chose rock. You Win!"}
+        if (ai === 2) {result.innerHTML = "AI chose paper. It's a Draw!"}
+        if (ai === 3) {result.innerHTML = "AI chose scissors. You Lose!"}
     } else if (user === 3) { //scissor
-        if (ai === 1) {result.innerHTML = "You Lose!"}
-        if (ai === 2) {result.innerHTML = "You Win!"}
-        if (ai === 3) {result.innerHTML = "It's a Draw!"}
+        if (ai === 1) {result.innerHTML = "AI chose rock. You Lose!"}
+        if (ai === 2) {result.innerHTML = "AI chose paper. You Win!"}
+        if (ai === 3) {result.innerHTML = "AI chose scissors. It's a Draw!"}
     }
 }
 
-function getUser() {
-    for (var i = 0; i < button.length; i++) {
-        button[i].addEventListener('click', function () {
-            switch (this.innerHTML) {
-                case "Rock": {
-                    user = 1;
-                    break;
-                }
-                case "Paper": {
-                    user = 2;
-                    break;
-                }
-                case "Scissor": {
-                    user = 3;
-                    break;
-                }
-                default: {
-                    break;
-                }
-            }
-        })
+/*
+function getUser(user_choice) {
+    switch (user_choice) {
+        case "Rock": {
+            user = 1;
+            break;
+        }
+        case "Paper": {
+            user = 2;
+            break;
+        }
+        case "Scissor": {
+            user = 3;
+            break;
+        }
+        default: {
+            break;
+        }
     }
-}
+}*/
 
 function getAI() {
     ai = Math.floor(Math.random() * 3) + 1;
