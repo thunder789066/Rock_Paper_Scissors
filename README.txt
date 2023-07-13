@@ -1,5 +1,3 @@
-# Web-ICP3
- 
 Rock, Paper, Scissors Algorithm
 
 L = Lose, W = Win, D = Draw/Tie
